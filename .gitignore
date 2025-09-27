@@ -1,0 +1,4 @@
+*venv/
+课程表.xlsx
+__pycache__/
+*.pyc
