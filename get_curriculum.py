@@ -114,9 +114,9 @@ def get_kb():
         for item in kb_list
     ]
 
-    return filtered_kb_list
+    return filtered_kb_list,dqzc
 
 
 if __name__ == "__main__":
-    kb = get_kb()
-    export_curriculum_excel.export(kb,"课程表.xlsx")
+    kb,zs= get_kb()
+    export_curriculum_excel.export(kb,f"第{zs}周课程表.xlsx")
