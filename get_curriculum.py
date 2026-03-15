@@ -40,26 +40,14 @@ def load_config():
 
 def get_kb():
     config = load_config()
-    vpn_credentials = config['vpn_credentials']
     system_credentials = config['system_credentials']
     curriculum_param = config['curriculum_param']
-    vpn_login_url = config['vpn_login_url']
     public_key_url = config['public_key_url']
     system_login_url = config['system_login_url']
     curriculum_url = config['curriculum_url']
     curriculum_html_url = config['curriculum_html_url']
 
     session = requests.Session()
-
-    # VPN 登录
-    login_page = session.get(vpn_login_url)
-    soup = BeautifulSoup(login_page.text, 'html.parser')
-    hidden_inputs = soup.find_all('input', type='hidden')
-    form_data = {inp['name']: inp['value'] for inp in hidden_inputs if 'name' in inp.attrs}
-    form_data.update(vpn_credentials)
-    vpn_response = session.post(vpn_login_url, data=form_data)
-    if "登录成功" not in vpn_response.text and vpn_response.url == vpn_login_url:
-        raise Exception("VPN 登录失败")
 
     # 获取系统公钥
     modulus, exponent = get_public_key(session, public_key_url)

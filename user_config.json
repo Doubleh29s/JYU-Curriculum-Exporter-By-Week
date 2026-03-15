@@ -1,8 +1,4 @@
 {
-  "vpn_credentials": {
-    "username": "引号里填写你的VPN学号",
-    "password": "引号里填写你的VPN密码"
-  },
   "system_credentials": {
     "csrftoken": "",
     "language": "zh_CN",
@@ -16,9 +12,8 @@
     "kblx": 1,
     "doType": "app"
   },
-  "vpn_login_url": "https://ids-jyu-edu-cn.webvpn.jyu.cn/authserver/login",
-  "public_key_url": "https://jwcjwxt-jyu-edu-cn-443.webvpn.jyu.cn/xtgl/login_getPublicKey.html",
-  "system_login_url": "https://jwcjwxt-jyu-edu-cn-443.webvpn.jyu.cn/xtgl/login_slogin.html",
-  "curriculum_url": "https://jwcjwxt-jyu-edu-cn-443.webvpn.jyu.cn/kbcx/xskbcxMobile_cxXsKb.html?gnmkdm=N2154",
-  "curriculum_html_url": "https://jwcjwxt-jyu-edu-cn-443.webvpn.jyu.cn/kbcx/xskbcxZccx_cxXskbcxIndex.html?gnmkdm=N2154&layout=default"
+  "public_key_url": "http://210.38.162.121/xtgl/login_getPublicKey.html",
+  "system_login_url": "http://210.38.162.121/xtgl/login_slogin.html",
+  "curriculum_url": "http://210.38.162.121/kbcx/xskbcxMobile_cxXsKb.html?gnmkdm=N2154",
+  "curriculum_html_url": "http://210.38.162.121/kbcx/xskbcxZccx_cxXskbcxIndex.html?gnmkdm=N2154&layout=default"
 }
